@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsorship — Flo Writes Code</title>
+    <title>Sponsorship - Flo Writes Code</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
@@ -63,6 +63,7 @@
         .channel:nth-of-type(1) { animation-delay: 0.22s; }
         .channel:nth-of-type(2) { animation-delay: 0.3s; }
         .channel:nth-of-type(3) { animation-delay: 0.38s; }
+        .channel:nth-of-type(4) { animation-delay: 0.46s; }
 
         .channel-label {
             display: flex;
@@ -142,11 +143,96 @@
             font-weight: 500;
         }
 
+        .usage-card {
+            padding: 1.25rem;
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(191, 219, 254, 0.9);
+            box-shadow: 0 14px 34px rgba(37, 99, 235, 0.06);
+        }
+
+        .usage-intro {
+            color: var(--slate);
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .usage-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 1rem 0 1.25rem;
+        }
+
+        .usage-type {
+            padding: 0.85rem 1rem;
+            border-radius: 0.75rem;
+            background: var(--blue-mist);
+            border: 1px solid rgba(191, 219, 254, 0.7);
+        }
+
+        .usage-type h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--blue-ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .usage-type p {
+            font-size: 0.875rem;
+            line-height: 1.45;
+            color: var(--slate);
+        }
+
+        .usage-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .usage-table th {
+            padding: 0 0.75rem 0.6rem;
+            text-align: left;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #64748b;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .usage-table td {
+            padding: 0.7rem 0.75rem;
+            color: var(--slate);
+            border-bottom: 1px solid rgba(191, 219, 254, 0.55);
+        }
+
+        .usage-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .usage-table th:not(:first-child),
+        .usage-table td:not(:first-child) {
+            text-align: right;
+        }
+
+        .usage-table td:not(:first-child) {
+            font-weight: 700;
+            color: var(--blue-accent);
+        }
+
+        .usage-note {
+            margin-top: 0.85rem;
+            font-size: 0.85rem;
+            line-height: 1.45;
+            color: #64748b;
+        }
+
         .sponsors {
             margin: 3.5rem 0 2.5rem;
             padding: 2rem 0;
             opacity: 0;
-            animation: rise 0.7s ease 0.46s forwards;
+            animation: rise 0.7s ease 0.58s forwards;
         }
 
         .sponsors h2 {
@@ -201,7 +287,7 @@
             max-width: 34rem;
             margin: -0.5rem auto 2.75rem;
             opacity: 0;
-            animation: rise 0.7s ease 0.42s forwards;
+            animation: rise 0.7s ease 0.52s forwards;
         }
 
         .cta-scene {
@@ -222,7 +308,7 @@
             border: 1px solid rgba(191, 219, 254, 0.95);
             box-shadow: 0 20px 48px rgba(37, 99, 235, 0.08);
             opacity: 0;
-            animation: rise 0.7s ease 0.54s forwards;
+            animation: rise 0.7s ease 0.66s forwards;
             transition:
                 transform 0.18s ease-out,
                 box-shadow 0.25s ease,
@@ -347,6 +433,16 @@
                 display: inline;
                 margin-right: 0.35rem;
             }
+
+            .usage-types {
+                grid-template-columns: 1fr;
+            }
+
+            .usage-table th,
+            .usage-table td {
+                padding-left: 0.4rem;
+                padding-right: 0.4rem;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -396,7 +492,7 @@
             <p class="hero-kicker">Sponsorship</p>
             <h1 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">Reach indie developers</h1>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                Partner with Flo Writes Code on YouTube, X, and the blog — clear packages, straightforward pricing.
+                Partner with Flo Writes Code on YouTube, short-form video, and X - clear packages, straightforward pricing.
             </p>
         </header>
 
@@ -422,6 +518,24 @@
                     </div>
                     <div class="package-price">
                         <strong>$250</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="channel" aria-labelledby="short-packages">
+            <div class="channel-label">
+                <h2 id="short-packages">Shorts &amp; Reels</h2>
+                <span aria-hidden="true"></span>
+            </div>
+            <div class="package-list">
+                <article class="package">
+                    <div>
+                        <h3>Dedicated Short/Reel</h3>
+                        <p>A short video posted on YouTube, Instagram, and TikTok. Optional repost on X for $50.</p>
+                    </div>
+                    <div class="package-price">
+                        <strong>$200</strong>
                     </div>
                 </article>
             </div>
@@ -463,22 +577,60 @@
             </div>
         </section>
 
-        <section class="channel" aria-labelledby="blog-packages">
+        <section class="channel" aria-labelledby="usage-rights">
             <div class="channel-label">
-                <h2 id="blog-packages">Blog</h2>
+                <h2 id="usage-rights">Usage Rights</h2>
                 <span aria-hidden="true"></span>
             </div>
-            <div class="package-list">
-                <article class="package">
-                    <div>
-                        <h3>Sponsored box</h3>
-                        <p>A sponsored placement on the blog for one week.</p>
+            <div class="usage-card">
+                <p class="usage-intro">Want to reuse the content yourself? Usage rights are added on top of the package price.</p>
+                <div class="usage-types">
+                    <div class="usage-type">
+                        <h3>Organic</h3>
+                        <p>Repost on your own social accounts, website, or newsletter, without ad spend.</p>
                     </div>
-                    <div class="package-price">
-                        <strong>$200</strong>
-                        <span>/ week</span>
+                    <div class="usage-type">
+                        <h3>Paid ads</h3>
+                        <p>Run the content as ads, including whitelisting, Spark Ads, and partnership ads.</p>
                     </div>
-                </article>
+                </div>
+                <table class="usage-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Organic</th>
+                            <th scope="col">Paid ads</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30 days</td>
+                            <td>+20%</td>
+                            <td>+40%</td>
+                        </tr>
+                        <tr>
+                            <td>3 months</td>
+                            <td>+35%</td>
+                            <td>+75%</td>
+                        </tr>
+                        <tr>
+                            <td>6 months</td>
+                            <td>+50%</td>
+                            <td>+100%</td>
+                        </tr>
+                        <tr>
+                            <td>12 months</td>
+                            <td>+75%</td>
+                            <td>+150%</td>
+                        </tr>
+                        <tr>
+                            <td>Perpetual</td>
+                            <td>+150%</td>
+                            <td>On request</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="usage-note">Percentages are of the package price, with a minimum fee of $50. Sharing or linking to the original post is always free.</p>
             </div>
         </section>
 
@@ -514,7 +666,7 @@
         <div class="cta-scene">
             <section class="cta" id="get-in-touch">
                 <h2>Get in touch</h2>
-                <p>Tell me about your product, timing, and which package fits — happy to advise.</p>
+                <p>Tell me about your product, timing, and which package fits - happy to advise.</p>
                 <div class="cta-actions">
                     <a href="mailto:hello@flowritesco.de" class="btn-primary">hello@flowritesco.de</a>
                     <a href="https://x.com/FloWritesCode" class="btn-secondary">DM @FloWritesCode on X</a>
